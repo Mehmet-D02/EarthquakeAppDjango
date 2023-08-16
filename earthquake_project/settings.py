@@ -25,7 +25,7 @@ SECRET_KEY = 'fn@b#de9u!j&lx9*)6+zhsq7)2r0dc=b2uic3m@y)gxt6d%s0*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['earthquake-app.onrender.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -130,3 +130,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media/"

@@ -14,10 +14,13 @@
         <ul>
             {% for entry in data %}
             <li>
-                <strong>Yer:</strong> {{ entry.Bölge }}<br>
-                <strong>Zaman:</strong> {{ entry.Tarih }}<br>
+                <strong>Yer:</strong> {{ entry.Yer }} <br>
+                <strong>Tarih:</strong> {{ entry.Tarih }}<br>
                 <strong>Büyüklük:</strong> {{ entry.Büyüklük }}<br>
-                <strong>Derinlik:</strong> {{ entry.Derinlik }}
+                <strong>Derinlik:</strong> {{ entry.Derinlik }}<br>
+                
+                
+                
             </li>
             {% endfor %}
         </ul>
