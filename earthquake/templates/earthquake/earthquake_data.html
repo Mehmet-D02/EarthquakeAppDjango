@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canlı Deprem Verileri</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Canlı Deprem Verileri</h1>
+        
+        {% if data %}
+        <ul>
+            {% for entry in data %}
+            <li>
+                <strong>Yer:</strong> {{ entry.Bölge }}<br>
+                <strong>Zaman:</strong> {{ entry.Tarih }}<br>
+                <strong>Büyüklük:</strong> {{ entry.Büyüklük }}<br>
+                <strong>Derinlik:</strong> {{ entry.Derinlik }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>Veri çekilemedi.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
