@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Canlı Deprem Verileri</title>
+    <title>Son Deprem Verileri</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link rel="icon"  href="{% static 'images/depico.png' %}">
 </head>
 <body>
     <div class="container">
-        <h1>Canlı Deprem Verileri</h1>
+        <h1>Son Deprem Verileri</h1>
         
         {% if data %}
         <ul>
             {% for entry in data %}
             <li>
-                <strong>Yer:</strong> {{ entry.Yer }} <br>
-                <strong>Tarih:</strong> {{ entry.Tarih }}<br>
+                <strong>Yer:</strong> {{ entry.Bölge }}<br>
+                <strong>Zaman:</strong> {{ entry.Tarih }}<br>
                 <strong>Büyüklük:</strong> {{ entry.Büyüklük }}<br>
-                <strong>Derinlik:</strong> {{ entry.Derinlik }}<br>
-                
-                
-                
+                <strong>Derinlik:</strong> {{ entry.Derinlik }}
             </li>
             {% endfor %}
         </ul>
